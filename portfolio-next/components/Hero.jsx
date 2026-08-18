@@ -13,12 +13,12 @@ export default function Hero() {
           <motion.div
             key={i}
             className="absolute text-blue-500/20 font-mono text-2xl font-bold"
-            initial={{ 
-              opacity: 0, 
-              y: Math.random() * 100, 
-              x: `${Math.random() * 100}vw` 
+            initial={{
+              opacity: 0,
+              y: Math.random() * 100,
+              x: `${Math.random() * 100}vw`
             }}
-            animate={{ 
+            animate={{
               opacity: [0.2, 0.5, 0.2],
               y: [null, Math.random() * -200 - 100],
               x: [null, Math.random() * 200 - 100],
@@ -43,7 +43,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto"
         >
-          <motion.p 
+          <motion.p
             className="text-blue-400 font-medium text-xl mb-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -51,8 +51,8 @@ export default function Hero() {
           >
             Olá, me chamo <span className="text-white font-semibold">Welberth Almeida</span> 👋
           </motion.p>
-          
-          <motion.h1 
+
+          <motion.h1
             className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -63,31 +63,31 @@ export default function Hero() {
               Front-end de qualidade!
             </span>
           </motion.h1>
-          
-          <motion.p 
+
+          <motion.p
             className="text-gray-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
-            Desenvolvedor Front-end com especialidade em React, CSS e JavaScript.
+            Desenvolvedor Front-end.
           </motion.p>
 
-          <motion.div 
+          <motion.div
             className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.8 }}
           >
-            <a 
-              href="#projetos" 
+            <a
+              href="#projetos"
               className="group flex items-center justify-center space-x-2 px-8 py-4 bg-transparent border border-blue-400 text-blue-400 rounded-full hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 w-full sm:w-auto font-medium"
             >
               <span>Ver Projetos</span>
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />
             </a>
-            <a 
-              href="#contato" 
+            <a
+              href="#contato"
               className="px-8 py-4 bg-gradient-to-r from-blue-500 to-emerald-500 text-white rounded-full shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto font-medium"
             >
               Vamos conversar
