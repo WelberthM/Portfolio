@@ -12,7 +12,6 @@
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
   <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
   <img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion" />
-  <img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
 </div>
 
 <br>
@@ -34,7 +33,6 @@ As principais tecnologias, bibliotecas e ferramentas de estudo que formam a base
 - **Frontend Core:** HTML5, CSS3, JavaScript (ES6+)
 - **Ecossistema React:** React, Next.js
 - **Estilização & Animações:** Tailwind CSS, Framer Motion
-- **Banco de Dados (Estudos):** SQL, MySQL
 - **Outros:** Phosphor Icons (Ícones)
 
 ---
