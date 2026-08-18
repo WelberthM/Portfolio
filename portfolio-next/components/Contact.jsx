@@ -16,9 +16,8 @@ export default function Contact() {
     setStatus("loading");
 
     try {
-      // ATENÇÃO: Substitua a URL abaixo pela URL que o Formspree gerar para você!
-      // Exemplo: https://formspree.io/f/seu_codigo_aqui
-      const formspreeUrl = "https://formspree.io/f/COLOQUE_SEU_CODIGO_AQUI"; 
+      // Utilizando variável de ambiente para proteção
+      const formspreeUrl = process.env.NEXT_PUBLIC_FORMSPREE_URL; 
       
       const response = await fetch(formspreeUrl, {
         method: "POST",
