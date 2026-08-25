@@ -49,7 +49,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            Olá, me chamo <span className="text-white font-semibold">Welberth Almeida</span> 👋
+            Olá, <span className="text-white font-semibold">pequeno TechLover!</span> 👋
           </motion.p>
 
           <motion.h1
@@ -58,9 +58,9 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
           >
-            Eleve seu negócio digital a outro nível com um{" "}
+            Vamos criar algo {" "} <br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
-              Front-end de qualidade!
+              incrível juntos?
             </span>
           </motion.h1>
 
@@ -70,7 +70,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
-            Desenvolvedor Front-end.
+            É um prazer receber sua visita por aqui! Me chamo Welberth!
           </motion.p>
 
           <motion.div

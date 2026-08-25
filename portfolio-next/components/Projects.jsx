@@ -8,8 +8,20 @@ export default function Projects() {
   const filters = ["Todos", "Design", "Programação"];
 
   const projects = [
+
     {
       id: 1,
+      title: "Nossa Escola",
+      description: "Sistema Desktop para gerenciamento de escolas (Em desenvolvimento)",
+      image: "",
+      tags: ["Java", "SQL"],
+      category: "Programação",
+      github: "",
+      live: "",
+    },
+
+    {
+      id: 2,
       title: "Jogo Detona Ralph",
       description: "Explorando o JavaScript criamos um joguinho da memória com o Detona Ralph.",
       image: "https://cinema-em-cena.nyc3.cdn.digitaloceanspaces.com/reviews/152/9OGpoSaGGwbWSFQVFaVGakLyaoK.jpg",
@@ -18,17 +30,6 @@ export default function Projects() {
       github: "https://github.com/WelberthM/DetonaRalph",
       live: "https://welberthm.github.io/DetonaRalph/",
     },
-
-    {
-      id: 2,
-      title: "Nossa Escola",
-      description: "Sistema Desktop para gerenciamento de escolas (Em desenvolvimento)",
-      image: "",
-      tags: ["Java", "SQL"],
-      category: "Programação",
-      github: "",
-      live: "",
-    }
     // Add future projects here
   ];
 
