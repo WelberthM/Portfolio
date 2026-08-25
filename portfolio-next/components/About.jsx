@@ -1,18 +1,18 @@
 "use client";
 import { motion } from "framer-motion";
-import { FileHtml, FileCss, FileJs, Coffee, Atom, RocketLaunch, ShareNetwork, GitBranch, PaintBrush } from "@phosphor-icons/react";
+import { FileHtml, FileCss, FileJs, Coffee, Atom, RocketLaunch, ShareNetwork, GitBranch, FileSql } from "@phosphor-icons/react";
 
 export default function About() {
   const skills = [
     { name: "HTML5", icon: <FileHtml size={32} /> },
     { name: "CSS3", icon: <FileCss size={32} /> },
     { name: "JavaScript", icon: <FileJs size={32} /> },
-    { name: "Java", icon: <Coffee size={32} /> },
     { name: "React", icon: <Atom size={32} /> },
     { name: "Next.js", icon: <RocketLaunch size={32} /> },
-    { name: "n8n", icon: <ShareNetwork size={32} /> },
+    { name: "Java", icon: <Coffee size={32} /> },
+    { name: "SQL", icon: <FileSql size={32} /> },
     { name: "Git & GitHub", icon: <GitBranch size={32} /> },
-    { name: "Design Responsivo", icon: <PaintBrush size={32} /> },
+    { name: "n8n", icon: <ShareNetwork size={32} /> },
   ];
 
   return (
@@ -30,7 +30,7 @@ export default function About() {
         </motion.div>
 
         <div className="flex flex-col lg:flex-row gap-16 items-center">
-          <motion.div 
+          <motion.div
             className="lg:w-1/2 space-y-6 text-gray-300 text-lg leading-relaxed"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -48,7 +48,7 @@ export default function About() {
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="lg:w-1/2 w-full"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}

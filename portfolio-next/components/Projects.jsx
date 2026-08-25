@@ -17,6 +17,17 @@ export default function Projects() {
       category: "Programação",
       github: "https://github.com/WelberthM/DetonaRalph",
       live: "https://welberthm.github.io/DetonaRalph/",
+    },
+
+    {
+      id: 2,
+      title: "Nossa Escola",
+      description: "Sistema Desktop para gerenciamento de escolas (Em desenvolvimento)",
+      image: "",
+      tags: ["Java", "SQL"],
+      category: "Programação",
+      github: "",
+      live: "",
     }
     // Add future projects here
   ];

@@ -45,36 +45,6 @@ As principais tecnologias, bibliotecas e ferramentas de estudo que formam a base
 
 ---
 
-## 🚀 Como rodar o projeto localmente
-
-Siga os passos abaixo para rodar a versão atualizada (Next.js) do portfólio na sua máquina:
-
-1. **Clone o repositório:**
-   ```bash
-   git clone https://github.com/WelberthM/MeuPrimeiroPortifolio.git
-   ```
-
-2. **Acesse a pasta do projeto em React/Next.js:**
-   ```bash
-   cd MeuPrimeiroPortifolio/portfolio-next
-   ```
-
-3. **Instale as dependências:**
-   ```bash
-   npm install
-   ```
-   *(ou `yarn install` se estiver usando Yarn)*
-
-4. **Inicie o servidor de desenvolvimento:**
-   ```bash
-   npm run dev
-   ```
-
-5. **Acesse no seu navegador:**
-   Abra `http://localhost:3000` para ver a aplicação rodando localmente.
-
----
-
 ## 📬 Contato
 
 - **LinkedIn:** [Acesse meu perfil](https://www.linkedin.com/in/welberthalmeida/)
