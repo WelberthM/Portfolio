@@ -13,7 +13,7 @@ export default function Projects() {
       id: 1,
       title: "Nossa Escola",
       description: "Sistema Desktop para gerenciamento de escolas (Em desenvolvimento)",
-      image: "",
+      image: "/img/ilustracao.webp",
       tags: ["Java", "SQL"],
       category: "Programação",
       github: "",
