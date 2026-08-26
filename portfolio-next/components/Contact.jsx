@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { EnvelopeSimple, PaperPlaneRight, CircleNotch, CheckCircle } from "@phosphor-icons/react";
+import { EnvelopeSimple, PaperPlaneRight, CircleNotch, CheckCircle, WarningCircle } from "@phosphor-icons/react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -16,12 +16,15 @@ export default function Contact() {
     setStatus("loading");
 
     try {
-      // Utilizando variável de ambiente para proteção
-      const formspreeUrl = process.env.NEXT_PUBLIC_FORMSPREE_URL; 
-      
+      const formspreeUrl = process.env.NEXT_PUBLIC_FORMSPREE_URL;
+
+      if (!formspreeUrl) {
+        throw new Error("Formspree URL não configurada.");
+      }
+
       const response = await fetch(formspreeUrl, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
         body: JSON.stringify(formData),
       });
 
@@ -30,20 +33,13 @@ export default function Contact() {
         setFormData({ name: "", email: "", message: "" });
         setTimeout(() => setStatus("idle"), 5000);
       } else {
-        // Fallback apenas para testar a animação caso a URL acima ainda seja a falsa
-        setTimeout(() => {
-          setStatus("success");
-          setFormData({ name: "", email: "", message: "" });
-          setTimeout(() => setStatus("idle"), 5000);
-        }, 1500);
+        setStatus("error");
+        setTimeout(() => setStatus("idle"), 5000);
       }
     } catch (error) {
-       // Fallback para erro de rede
-       setTimeout(() => {
-        setStatus("success");
-        setFormData({ name: "", email: "", message: "" });
-        setTimeout(() => setStatus("idle"), 5000);
-      }, 1500);
+      console.error("Erro ao enviar formulário:", error);
+      setStatus("error");
+      setTimeout(() => setStatus("idle"), 5000);
     }
   };
 
@@ -132,7 +128,11 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={status === "loading" || status === "success"}
-                className="group relative flex items-center justify-center gap-2 w-full px-8 py-4 bg-gradient-to-r from-blue-500 to-emerald-500 text-white rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:-translate-y-1 transition-all duration-300 font-bold text-lg disabled:opacity-70 disabled:hover:translate-y-0 disabled:cursor-not-allowed overflow-hidden mt-2"
+                className={`group relative flex items-center justify-center gap-2 w-full px-8 py-4 ${
+                  status === "error"
+                    ? "bg-rose-600 shadow-rose-600/25 hover:shadow-rose-600/40"
+                    : "bg-gradient-to-r from-blue-500 to-emerald-500 shadow-blue-500/25 hover:shadow-blue-500/40"
+                } text-white rounded-xl shadow-lg hover:-translate-y-1 transition-all duration-300 font-bold text-lg disabled:opacity-70 disabled:hover:translate-y-0 disabled:cursor-not-allowed overflow-hidden mt-2`}
               >
                 {status === "idle" && (
                   <>
@@ -150,6 +150,12 @@ export default function Contact() {
                   <>
                     <CheckCircle size={24} className="text-white" />
                     <span>Enviado com Sucesso!</span>
+                  </>
+                )}
+                {status === "error" && (
+                  <>
+                    <WarningCircle size={24} className="text-white" />
+                    <span>Erro ao enviar. Tente novamente!</span>
                   </>
                 )}
               </button>
